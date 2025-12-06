@@ -1,5 +1,5 @@
 from fastapi import FastAPI, Request
-from datetime import datetime
+from datetime import datetime, timedelta, timezone
 import re
 import uvicorn
 import asyncio
@@ -64,5 +64,6 @@ async def sms_handler(request: Request):
 if __name__ == "__main__":
     print("🚀 Запуск Gosuslugi → Telegram...")
     uvicorn.run(app, host="0.0.0.0", port=8000)
+
 
 
