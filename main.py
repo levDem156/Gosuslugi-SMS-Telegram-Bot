@@ -43,7 +43,7 @@ async def sms_handler(request: Request):
         telegram_msg = '\n'.join([
             f"🔔 Госуслуги SMS",
             f"Код: `{code}`",
-            f"Время: {datetime.utcnow() + timedelta(hours=5)}.strftime('%H:%M:%S')}",
+            f"Время: {datetime.utcnow() + timedelta(hours=5).strftime('%H:%M:%S')}",
             "⚠️ Никому не пересылай!"
         ])
 
@@ -64,4 +64,5 @@ async def sms_handler(request: Request):
 if __name__ == "__main__":
     print("🚀 Запуск Gosuslugi → Telegram...")
     uvicorn.run(app, host="0.0.0.0", port=8000)
+
 
