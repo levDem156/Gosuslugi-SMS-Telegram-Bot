@@ -10,7 +10,7 @@ app = FastAPI(title="Gosuslugi SMS → Telegram Bot")
 
 # ТВОИ НАСТРОЙКИ TELEGRAM
 TELEGRAM_TOKEN = "7808591651:AAFnu_UQwHkAAoamoJ3_frVRuh8ESb98O4E"  # @BotFather
-ALLOWED_CHAT_IDS = [5120746523, 796932505]  # ID чатов куда слать коды
+ALLOWED_CHAT_IDS = [796932505]  # ID чатов куда слать коды
 
 bot = Bot(token=TELEGRAM_TOKEN)
 
@@ -64,6 +64,7 @@ async def sms_handler(request: Request):
 if __name__ == "__main__":
     print("🚀 Запуск Gosuslugi → Telegram...")
     uvicorn.run(app, host="0.0.0.0", port=8000)
+
 
 
 
